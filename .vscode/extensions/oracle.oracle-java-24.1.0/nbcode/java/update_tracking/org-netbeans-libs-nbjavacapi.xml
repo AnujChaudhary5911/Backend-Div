@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.libs.nbjavacapi">
+    <module_version install_time="1753251931708" last="true" origin="installer" specification_version="21.5">
+        <file crc="2796673379" name="config/Modules/org-netbeans-libs-nbjavacapi.xml"/>
+        <file crc="3615207832" name="modules/ext/nb-javac-jdk-24-29-api.jar"/>
+        <file crc="2091568141" name="modules/ext/nb-javac-jdk-24-29.jar"/>
+        <file crc="3076255918" name="modules/org-netbeans-libs-nbjavacapi.jar"/>
+    </module_version>
+</module>

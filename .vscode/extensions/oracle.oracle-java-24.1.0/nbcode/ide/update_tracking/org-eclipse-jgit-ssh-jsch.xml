@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.eclipse.jgit.ssh.jsch">
+    <module_version install_time="1753251845435" last="true" origin="installer" specification_version="7.0.0.202409031743-r">
+        <file crc="3153021637" name="config/Modules/org-eclipse-jgit-ssh-jsch.xml"/>
+        <file crc="4021400608" name="modules/org-eclipse-jgit-ssh-jsch.jar"/>
+    </module_version>
+</module>

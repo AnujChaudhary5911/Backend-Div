@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.gradle.dependencies">
+    <module_version install_time="1753251909410" last="true" origin="installer" specification_version="1.4.0.1.1.1">
+        <file crc="4038313414" name="config/Modules/org-netbeans-modules-gradle-dependencies.xml"/>
+        <file crc="741117328" name="modules/org-netbeans-modules-gradle-dependencies.jar"/>
+    </module_version>
+</module>

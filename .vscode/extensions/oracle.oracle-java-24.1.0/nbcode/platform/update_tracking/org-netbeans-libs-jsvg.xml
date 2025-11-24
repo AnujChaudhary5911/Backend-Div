@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.libs.jsvg">
+    <module_version install_time="1753251814210" last="true" origin="installer" specification_version="1.22.0.1">
+        <file crc="2585787066" name="config/Modules/org-netbeans-libs-jsvg.xml"/>
+        <file crc="1785180063" name="modules/ext/jsvg-1.6.1.jar"/>
+        <file crc="1776511094" name="modules/org-netbeans-libs-jsvg.jar"/>
+    </module_version>
+</module>
