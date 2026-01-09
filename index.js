@@ -1,1 +1,1 @@
-console.log("anuj")
+console.log(20+20)
