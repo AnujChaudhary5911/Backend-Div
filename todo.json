@@ -1,0 +1,22 @@
+[
+  {
+    "name": "manan",
+    "email": "anujchh287@gmail.com",
+    "password": 741780,
+    "todo": [
+      {
+        "createtime": "2026-01-28T05:46:06.486Z",
+        "task": "todo",
+        "status": false
+      }
+    ]
+  }
+]
+[
+  {
+    "name": "anuj",
+    "email": "anujchh287@gmail.com",
+    "password": 741780,
+    "todo": []
+  }
+]
