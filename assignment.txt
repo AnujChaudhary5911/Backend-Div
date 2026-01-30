@@ -1,0 +1,7 @@
+Sync vs Async Sync waits (blocks code); Async doesn't wait (non-blocking).
+Streams   Use for huge files to save RAM.
+utf8   Converts computer bits into human-readable text.
+Errors ENOENT (not found), EACCES (no permission), EISDIR (it's a folder, not a file).
+Delete Folder Use recursive: true to wipe the folder and everything inside it.
+Error Handling Prevents the entire app from crashing if one file fails if file is not working then error massage was show .
+Write vs Append writeFile replaces everything; appendFile adds to the end.
