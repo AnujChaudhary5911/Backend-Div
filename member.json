@@ -1,0 +1,12 @@
+[
+  {
+    "memberId": 123,
+    "name": "anuj",
+    "membershipType": "gold"
+  },
+  {
+    "memberId": 124,
+    "name": "anuj",
+    "membershipType": "gold"
+  }
+]

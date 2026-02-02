@@ -1,4 +1,4 @@
-import { error } from 'console';
+
 import fs from 'fs';
 
  function register(name,email,password){
@@ -18,7 +18,7 @@ import fs from 'fs';
         }
         user.push(ob);
         fs.writeFileSync("todo.json",JSON.stringify(user,null,2))
-        console.log("your data created");
+        console.log("data is created");
 
     }catch(error){
         console.log("error");
