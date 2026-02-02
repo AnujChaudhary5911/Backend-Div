@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  },
+  "name": "movie_registration_logics",
+  "version": "1.0.0",
+  "description": "we are going to make movie registration logics ",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnujChaudhary5911/Backend-Div.git"
+  },
+  "author": "Anuj Chaudhary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnujChaudhary5911/Backend-Div/issues"
+  },
+  "homepage": "https://github.com/AnujChaudhary5911/Backend-Div#readme"
+}
