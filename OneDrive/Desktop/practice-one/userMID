@@ -1,0 +1,24 @@
+import fs from "fs";
+import joi from "joi";
+function userMid1(req, resp, next) {
+  try {
+    let ab = joi.object({
+      name: joi.string().lowercase().trim().min(2).max(200).required(),
+      userId: joi.string().trim().min(4).max(10).required(),
+      userType: joi.string().required(),
+    });
+
+    let { error, value } = ab.validate(req.body);
+    if (error) {
+     return resp.status(400).json({
+        status: "error",
+        message: error.details[0].message // Provides the actual validation issue
+      });
+    }
+    req.body = value;
+    next();
+  } catch (error) {
+    resp.status(500).send("there are some error in your code");
+     }
+}
+export default userMid1;

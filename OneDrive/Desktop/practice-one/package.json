@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "joi": "^18.0.2",
+    "nodemon": "^3.1.11",
+    "path": "^0.12.7"
+  },
+  "name": "practice-one",
+  "version": "1.0.0",
+  "description": "self practice passing req.body from frontend",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnujChaudhary5911/Backend-Div.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnujChaudhary5911/Backend-Div/issues"
+  },
+  "homepage": "https://github.com/AnujChaudhary5911/Backend-Div#readme"
+}
