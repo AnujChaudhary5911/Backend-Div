@@ -1,0 +1,32 @@
+[
+  {
+    "userId": 1234,
+    "name": "manan",
+    "type": "dwduwd"
+  },
+  {
+    "userId": "1233",
+    "name": "manan",
+    "type": "dwduwd"
+  },
+  {
+    "userId": "",
+    "name": "",
+    "type": ""
+  },
+  {
+    "userId": "2210",
+    "name": "prachi",
+    "type": "STANDARD"
+  },
+  {
+    "userId": "5555",
+    "name": "sakshi ",
+    "type": "VIP"
+  },
+  {
+    "userId": "5987",
+    "name": "manan",
+    "type": "VIP"
+  }
+]
