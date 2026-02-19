@@ -1,0 +1,14 @@
+[
+  {
+    "id": "7",
+    "Name": "anuj",
+    "BasicSalary": 44000,
+    "Salary": "50000",
+    "profilePic": "img1",
+    "gender": "Male",
+    "startDay": "Day",
+    "startMonth": "Month",
+    "startYear": "2025",
+    "notes": "Year"
+  }
+]

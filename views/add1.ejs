@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Employee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="b">
+<div class="form-container">
+    <form action="add-employee" method="POST">
+        <h2>Employee Payroll Form</h2>
+
+        <div class="form-row">
+            <label for="empId">Employee ID</label>
+            <input type="text" id="empId" name="id" class="add1" required placeholder="Enter ID">
+        </div>
+
+        <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="Name" class="add1" required placeholder="Enter Name">
+        </div>
+
+        <div class="form-row">
+            <label>Profile image</label>
+            <div class="radio-group">
+                <input class="add2" type="radio" name="profilePic" value="img1" id="p1"><label for="p1"><img src="/images/p1.png" alt="1"></label>
+                <input class="add2" type="radio" name="profilePic" value="img2" id="p2"><label for="p2"><img src="/images/p2.png" alt="2"></label>
+                <input class="add2" type="radio" name="profilePic" value="img3" id="p3"><label for="p3"><img src="/images/p3.png" alt="3"></label>
+                <input class="add2" type="radio" name="profilePic" value="img4" id="p4"><label for="p4"><img src="/images/p4.png" alt="4"></label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label>Gender</label>
+            <input class="add2" type="radio" name="gender" value="Male" id="male"><label for="male">Male</label>
+            <input class="add2" type="radio" name="gender" value="Female" id="female"><label for="female">Female</label>
+        </div>
+
+        <div class="form-row">
+            <label>Department</label>
+            <input class="add3" type="checkbox" name="department" value="HR"> HR
+            <input class="add3" type="checkbox" name="department" value="Sales"> Sales
+            <input class="add3" type="checkbox" name="department" value="Finance"> Finance
+            <input class="add3" type="checkbox" name="department" value="Engineer"> Engineer
+        </div>
+
+        <div class="form-row">
+            <label>Salary</label>
+            <select name="Salary" class="add4">
+                <option value="" selected disabled>Select Salary</option>
+                <option value="30000">30,000</option>
+                <option value="50000">50,000</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label>Start Date</label>
+            <select name="startDay" class="add4">
+                <option>Day</option>
+                <% for(let i=1; i<=31; i++) { %> <option><%= i %></option> <% } %>
+            </select>
+            <select name="startMonth" class="add4">
+                <option>Month</option>
+               <option>January</option>
+<option>February</option>
+<option>March</option>
+<option>April</option>
+<option>May</option>
+<option>June</option>
+<option>July</option>
+<option>August</option>
+<option>September</option>
+<option>October</option>
+<option>November</option>
+<option>December</option>
+            </select>
+            <select name="startYear" class="add4">
+                <option>Year</option>
+                <option>2025</option>
+                <option>2026</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label>Notes</label>
+            <textarea name="notes" class="add5" rows="4"></textarea>
+        </div>
+
+        <div class="button-row">
+            <button type="reset" class="btn">Reset</button>
+            <button type="submit" class="btn submit-btn">Submit</button>
+        </div>
+    </form>
+</div>
+</div>
+    
+</body>
+</html>
