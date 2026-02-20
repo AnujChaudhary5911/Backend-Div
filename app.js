@@ -2,6 +2,7 @@ import express from 'express'
 import path from 'path'
 import {loginExist, Registor,delete1,update,findU} from './employ.js'
 const app=express()
+app.use(express.json());
 const ab=path.resolve('dev')
 app.use(express.static(ab))
 app.use(express.urlencoded({extended:false}))

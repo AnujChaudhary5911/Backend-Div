@@ -1,7 +1,7 @@
 import fs from'fs'
 export function Registor(req,resp){
      try{
-       const { id, Name, Department, Salary, profilePic, gender, startDay, startMonth, startYear, notes,type } = req.body;
+       const { id, Name,Type, Department, Salary, profilePic, gender, startDay, startMonth, startYear, notes,type } = req.body;
         let user=[];
         let newSalary= Salary * 0.12
         let BasicSalary=Salary-newSalary
@@ -17,7 +17,7 @@ export function Registor(req,resp){
             }
         }
          let ob={
-            id, Name, Department, BasicSalary,Salary, profilePic, gender, startDay, startMonth, startYear, notes,type
+            id, Name,Type, Department, BasicSalary,Salary, profilePic, gender, startDay, startMonth, startYear, notes,type
             
         }
         user.push(ob)
@@ -35,8 +35,9 @@ export function Registor(req,resp){
 export function update(req,res){
      try {
            
-    const {id, Name, Department, BasicSalary, profilePic, gender, startDay, startMonth, startYear, notes} = req.body;  
-   
+    const {id, Name,Type, department, Salary, profilePic, gender, startDay, startMonth, startYear, notes} = req.body;  
+    
+
     if (!fs.existsSync("user.json")) {
       return res.status(404).send("No users found");
     }
@@ -45,15 +46,22 @@ export function update(req,res){
     if (userIndex === -1) {
       return res.status(404).send("User not found");
     }
-   users[userIndex].Name = Name || users[userIndex].Name;
-    users[userIndex].Department = Department || users[userIndex].Department;
-    users[userIndex].BasicSalary = BasicSalary || users[userIndex].BasicSalary;
+    let newSalary = users[userIndex].BasicSalary; // Default to old salary
+
+if (Salary) { 
+    // 2. Perform math (using Number to be safe)
+    newSalary = Number(Salary) * 0.12; 
+}
+    users[userIndex].Type = Type || users[userIndex].Type;
+    users[userIndex].Name = Name || users[userIndex].Name;
+    users[userIndex].Department = department || users[userIndex].Department;
+    users[userIndex].BasicSalary =  Salary-newSalary || users[userIndex].BasicSalary;
     users[userIndex].gender = gender || users[userIndex].gender;
     users[userIndex].profilePic = profilePic || users[userIndex].profilePic;
     users[userIndex].notes = notes || users[userIndex].notes;
     users[userIndex].startDay = startDay || users[userIndex].startDay;
     users[userIndex].startMonth = startMonth || users[userIndex].startMonth;
-    users[userIndex].notes = startYear || users[userIndex].startYear;
+    users[userIndex].startYear = startYear || users[userIndex].startYear;
     fs.writeFileSync("user.json", JSON.stringify(users, null, 2));
 
    return res.render('home')
@@ -88,12 +96,23 @@ export function loginExist(req,resp){
         if(fs.existsSync("user.json")){
             const data=JSON.parse(fs.readFileSync("user.json","utf-8"))
             let Isuser=data.some((value)=>value.id==id&&value.Name==Name)
-            if(Isuser){
+            let N=data.find(val=> val.id==id)
+            let type="";
+            if(N){
+                type=N.Type
+            }
+            if(Isuser && type=="Admin"){
                 return resp.render('home')
             }
-            else{
-              resp.send("user is not registered")
+            else if(Isuser&&type=="Employe"){
+              return resp.render('home1')
             }
+            else{
+                return resp.send("user is not Registered")
+            }
+        }
+        if(!fs.existsSync("user.json")){
+            return resp.send("there is no user data")
         }
        
     }

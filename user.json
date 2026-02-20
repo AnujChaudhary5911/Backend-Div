@@ -4,11 +4,25 @@
     "Name": "anuj",
     "BasicSalary": 44000,
     "Salary": "50000",
+    "Type": "Admin",
     "profilePic": "img1",
     "gender": "Male",
     "startDay": "Day",
     "startMonth": "Month",
-    "startYear": "2025",
+    "startYear": "Year",
     "notes": "Year"
+  },
+  {
+    "id": "2",
+    "Name": "minesh",
+    "Type": "Employe",
+    "BasicSalary": "50000",
+    "Salary": "30000",
+    "profilePic": "img1",
+    "gender": "Female",
+    "startDay": "Day",
+    "startMonth": "Month",
+    "startYear": "Year",
+    "notes": "2025"
   }
 ]
