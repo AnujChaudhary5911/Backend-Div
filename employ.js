@@ -3,7 +3,7 @@ export function Registor(req,resp){
      try{
        const { id, Name,Type, Department, Salary, profilePic, gender, startDay, startMonth, startYear, notes,type } = req.body;
         let user=[];
-        let newSalary= Salary * 0.12
+        let newSalary= Salary * 0.10
         let BasicSalary=Salary-newSalary
        
         if(fs.existsSync("user.json")){

@@ -24,5 +24,31 @@
     "startMonth": "Month",
     "startYear": "Year",
     "notes": "2025"
+  },
+  {
+    "id": "6",
+    "Name": "Aman",
+    "Type": "Employe",
+    "BasicSalary": 44000,
+    "Salary": "30000",
+    "profilePic": "img1",
+    "gender": "Male",
+    "startDay": "Day",
+    "startMonth": "Month",
+    "startYear": "Year",
+    "notes": "new employe"
+  },
+  {
+    "id": "1",
+    "Name": "Aman",
+    "Type": "Employe",
+    "BasicSalary": 45000,
+    "Salary": "50000",
+    "profilePic": "img1",
+    "gender": "Male",
+    "startDay": "21",
+    "startMonth": "February",
+    "startYear": "2026",
+    "notes": "new member"
   }
 ]
