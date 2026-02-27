@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profile | <%= Name %></title>
+    <style>
+        /* Modern UI Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Profile Card Container */
+        .profile-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Top Header Section */
+        .profile-header {
+            background: linear-gradient(135deg, #42515f 0%, #2a3642 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .profile-header h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .profile-header p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Body Info Section */
+        .profile-body {
+            padding: 30px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .label {
+            color: #7f8c8d;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .value {
+            color: #2c3e50;
+            font-weight: 500;
+            text-align: right;
+        }
+
+        /* Action Buttons */
+        .actions {
+            padding: 0 30px 30px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .btn-back {
+            background-color: #f8f9fa;
+            color: #42515f;
+            border: 1px solid #ddd;
+        }
+
+        .btn-back:hover {
+            background-color: #e9ecef;
+        }
+
+        /* Tag for Department */
+        .dept-tag {
+            background: #e1f0ff;
+            color: #007bff;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="profile-header">
+            <h1><%= Name %></h1>
+            <p>Employee Record Found</p>
+        </div>
+
+        <div class="profile-body">
+            <div class="info-row">
+                <span class="label">Department</span>
+                <span class="value"><span class="dept-tag"><%= Department %></span></span>
+            </div>
+            
+            <div class="info-row">
+                <span class="label">Basic Salary</span>
+                <span class="value">₹<%= BasicSalary %></span>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Gender</span>
+                <span class="value"><%= gender %></span>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Joining Year</span>
+                <span class="value"><%= startYear %></span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="/home1" class="btn btn-back">Back to Home</a>
+        </div>
+    </div>
+
+</body>
+</html>

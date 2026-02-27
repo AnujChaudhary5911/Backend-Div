@@ -50,5 +50,18 @@
     "startMonth": "February",
     "startYear": "2026",
     "notes": "new member"
+  },
+  {
+    "id": "8",
+    "Name": "Aditya",
+    "Type": "Employe",
+    "BasicSalary": 44000,
+    "Salary": "50000",
+    "profilePic": "img1",
+    "gender": "Male",
+    "startDay": "Day",
+    "startMonth": "Month",
+    "startYear": "Year",
+    "notes": "yes"
   }
 ]

@@ -1,5 +1,6 @@
 import express from 'express'
 import path from 'path'
+import fs from 'fs'
 import {loginExist, Registor,delete1,update,findU} from './employ.js'
 const app=express()
 app.use(express.json());
@@ -14,7 +15,10 @@ app.get("/register",(req,resp)=>{
     resp.render('add1')
 })
 app.get("/home",(req,resp)=>{
-    resp.render('home')
+   resp.render('home')
+})
+app.get("/home1",(req,resp)=>{
+    resp.render('home1')
 })
 app.get("/delete",(req,resp)=>{
     resp.render('delete')

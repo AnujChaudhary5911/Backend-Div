@@ -86,10 +86,10 @@ body {
     flex-direction: column;
 }
 .container button{
-    border: 0px;
+    /* border: 0px; */
     background-color: cadetblue;
     border-radius: 25px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
 .i{
     height: 40px;
@@ -98,8 +98,13 @@ body {
 }
 .l{
     padding:16px 20px;
+    margin: auto;
   
    
+}
+.l:hover{
+    background-color: darkolivegreen;
+    color: #ccc;
 }
 input {
   /* This adds space inside the box */
@@ -194,7 +199,9 @@ input {
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #ffffff;
+    box-shadow: 2px 2px 4px 5px grey;
 }
+
 
 .form-row {
     display: flex;

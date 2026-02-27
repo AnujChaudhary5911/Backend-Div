@@ -3,7 +3,7 @@ export function Registor(req,resp){
      try{
        const { id, Name,Type, Department, Salary, profilePic, gender, startDay, startMonth, startYear, notes,type } = req.body;
         let user=[];
-        let newSalary= Salary * 0.10
+        let newSalary= Salary * 0.12
         let BasicSalary=Salary-newSalary
        
         if(fs.existsSync("user.json")){
@@ -22,7 +22,7 @@ export function Registor(req,resp){
         }
         user.push(ob)
         fs.writeFileSync("user.json",JSON.stringify(user,null,2))
-        return resp.send("new employ registered")
+        return resp.render("home")
         // resp.render('login')
 
     }
@@ -142,8 +142,12 @@ export function findU(req,resp){
         let c=user[index].Name
         let d=user[index].gender
         let e=user[index].startYear
+        if(user[index].Type=="Admin"){
        return resp.render('find',{Name:c,Department:b,BasicSalary:a,gender:d,startYear:e})
-        
+        }
+        if(user[index].Type=="Employe"){
+        return resp.render('find1',{Name:c,Department:b,BasicSalary:a,gender:d,startYear:e})
+        }
 
     }
     catch(error){
