@@ -1,0 +1,173 @@
+MongoDB CRUD Operations-
+
+use firstdb
+switched to db firstdb
+db.students.insertMany([
+  {
+    name: "Aman Sharma",
+    email: "aman@gmail.com",
+    GPA: 3.5,
+    city: "Delhi",
+    courses: ["Math", "Physics", "Chemistry", "English", "CS", "Biology"]
+  },
+  {
+    name: "Priya Singh",
+    email: "priya@gmail.com",
+    GPA: 3.0,
+    city: "Mumbai",
+    courses: ["Math", "English", "History"]
+  },
+  {
+    name: "Rahul Verma",
+    email: "rahul@gmail.com",
+    GPA: 3.8,
+    city: "Bangalore",
+    courses: ["CS", "Math", "AI", "ML", "Data Science", "Cloud"]
+  },
+  {
+    name: "Sneha Gupta",
+    email: "sneha@gmail.com",
+    GPA: 2.9,
+    city: "Kolkata",
+    courses: ["English", "History", "Political Science"]
+  },
+  {
+    name: "Arjun Mehta",
+    email: "arjun@gmail.com",
+    GPA: 3.2,
+    city: "Pune",
+    courses: ["Math", "Physics", "Chemistry", "Biology", "CS"]
+  },
+  {
+    name: "Neha Kapoor",
+    email: "neha@gmail.com",
+    GPA: 3.5,
+    city: "Chandigarh",
+    courses: ["CS", "AI", "ML", "Math", "Statistics", "Cloud", "DBMS"]
+  },
+  {
+    name: "Karan Patel",
+    email: "karan@gmail.com",
+    GPA: 3.0,
+    city: "Ahmedabad",
+    courses: ["Commerce", "Economics"]
+  },
+  {
+    name: "Riya Das",
+    email: "riya@gmail.com",
+    GPA: 3.7,
+    city: "Hyderabad",
+    courses: ["Math", "CS", "AI", "ML", "Data Science"]
+  }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('69c501780b2f3cfdd0f1e696'),
+    '1': ObjectId('69c501780b2f3cfdd0f1e697'),
+    '2': ObjectId('69c501780b2f3cfdd0f1e698'),
+    '3': ObjectId('69c501780b2f3cfdd0f1e699'),
+    '4': ObjectId('69c501780b2f3cfdd0f1e69a'),
+    '5': ObjectId('69c501780b2f3cfdd0f1e69b'),
+    '6': ObjectId('69c501780b2f3cfdd0f1e69c'),
+    '7': ObjectId('69c501780b2f3cfdd0f1e69d')
+  }
+}
+db.students.find({email:"neha@gmail.com"});
+{
+  _id: ObjectId('69c501780b2f3cfdd0f1e69b'),
+  name: 'Neha Kapoor',
+  email: 'neha@gmail.com',
+  GPA: 3.5,
+  city: 'Chandigarh',
+  courses: [
+    'CS',
+    'AI',
+    'ML',
+    'Math',
+    'Statistics',
+    'Cloud',
+    'DBMS'
+  ]
+}
+db.students.updateOne({email: "riya@gmail.com"},{$set:{GPA:7.1}});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.students.deleteOne({emial:"rahul@gmail.com"});
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+
+______________________________________________________________________________________________________________________________________
+
+use firstdb
+switched to db firstdb
+db.books.insertMany([
+  {
+    title: "Think and Grow Rich",
+    author: "Napoleon Hill",
+    available: true
+  },
+  {
+    title: "The Power of Habit",
+    author: "Charles Duhigg",
+    available: true
+  },
+  {
+    title: "Deep Work",
+    author: "Cal Newport",
+    available: false
+  },
+  {
+    title: "Ikigai",
+    author: "Hector Garcia",
+    available: true
+  },
+  {
+    title: "Start With Why",
+    author: "Simon Sinek",
+    available: false
+  },
+  {
+    title: "Zero to One",
+    author: "Peter Thiel",
+    available: true
+  },
+  {
+    title: "The Subtle Art of Not Giving a F*ck",
+    author: "Mark Manson",
+    available: true
+  },
+  {
+    title: "Can't Hurt Me",
+    author: "David Goggins",
+    available: false
+  }
+]);
+db.books.find({ author: "Napoleon Hill" });
+{
+  _id: ObjectId('69c517f23c4dddc1d06985f5'),
+  title: 'Think and Grow Rich',
+  author: 'Napoleon Hill',
+  available: true
+}
+db.books.updateOne(
+  { title: "Ikigai" },
+  { $set: { available: false } }
+);
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+
+
