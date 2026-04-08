@@ -1,0 +1,42 @@
+Gemini said
+git config --global user.name "Your Name"
+Sets the author name attached to your commits across your system.
+
+git config --global user.email "you@example.com"
+Sets the email address tied to your commit history.
+
+git init
+Creates a new, empty Git repository in your current directory.
+
+git clone [url]
+Downloads a complete copy of an existing remote repository to your local machine.
+
+git status
+Displays the current state of your working directory, showing which files are modified, staged, or untracked.
+
+git add [file]
+Stages specific changes, preparing them to be saved. Using git add . stages all modifications at once.
+
+git commit -m "Descriptive message"
+Saves your staged changes permanently into the local repository's history with a descriptive message.
+
+git log
+Shows the chronological history of all commits made on your current branch.
+
+git branch [branch-name]
+Creates a new isolated branch, allowing you to work on a feature safely without affecting the main codebase.
+
+git switch [branch-name]
+Changes your active working directory to the specified branch.
+
+git merge [branch-name]
+Takes the history and changes from the specified branch and combines them into the branch you are currently on.
+
+git remote add origin [url]
+Connects your local repository to a remote server, such as GitHub or GitLab.
+
+git pull
+Downloads the newest changes from the remote repository and immediately merges them into your active local branch.
+
+git push origin [branch-name]
+Uploads your local, committed changes to the remote repository so they are backed up and shared with others.
